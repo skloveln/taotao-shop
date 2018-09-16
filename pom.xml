@@ -4,6 +4,7 @@
 	<groupId>com.taotao</groupId>
 	<artifactId>taotao-shop</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
 	<modules>
 		<module>taotao-common</module>
