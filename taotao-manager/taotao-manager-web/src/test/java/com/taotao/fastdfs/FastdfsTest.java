@@ -1,9 +1,6 @@
 package com.taotao.fastdfs;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
 
-import org.csource.common.MyException;
 import org.csource.fastdfs.ClientGlobal;
 import org.csource.fastdfs.StorageClient;
 import org.csource.fastdfs.StorageServer;
@@ -14,7 +11,7 @@ import org.junit.Test;
 public class FastdfsTest {
 	
 	@Test
-	public void testUpload() throws FileNotFoundException, IOException, MyException{
+	public void testUpload() throws Exception{
 		/*
 		1、把FastDFS提供的jar包添加到工程中
 		2、初始化全局配置。加载一个配置文件。

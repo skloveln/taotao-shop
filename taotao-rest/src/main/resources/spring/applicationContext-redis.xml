@@ -45,29 +45,17 @@
 		<constructor-arg name="nodes">
 			<set>
 				<bean class="redis.clients.jedis.HostAndPort">
-					<constructor-arg index="0" value="192.168.31.200"></constructor-arg>
+					<constructor-arg index="0" value="192.168.10.130"></constructor-arg>
 					<constructor-arg index="1" value="7001"></constructor-arg>
 				</bean>
-				<bean class="redis.clients.jedis.HostAndPort">
-					<constructor-arg index="0" value="192.168.31.200"></constructor-arg>
-					<constructor-arg index="1" value="7002"></constructor-arg>
-				</bean>
-				<bean class="redis.clients.jedis.HostAndPort">
-					<constructor-arg index="0" value="192.168.31.200"></constructor-arg>
-					<constructor-arg index="1" value="7003"></constructor-arg>
-				</bean>
-				<bean class="redis.clients.jedis.HostAndPort">
-					<constructor-arg index="0" value="192.168.31.200"></constructor-arg>
-					<constructor-arg index="1" value="7004"></constructor-arg>
-				</bean>
-				<bean class="redis.clients.jedis.HostAndPort">
-					<constructor-arg index="0" value="192.168.31.200"></constructor-arg>
-					<constructor-arg index="1" value="7005"></constructor-arg>
-				</bean>
-				<bean class="redis.clients.jedis.HostAndPort">
-					<constructor-arg index="0" value="192.168.31.200"></constructor-arg>
-					<constructor-arg index="1" value="7006"></constructor-arg>
-				</bean>			
+				<!--<bean class="redis.clients.jedis.HostAndPort">-->
+					<!--<constructor-arg index="0" value="192.168.10.131"></constructor-arg>-->
+					<!--<constructor-arg index="1" value="7002"></constructor-arg>-->
+				<!--</bean>-->
+				<!--<bean class="redis.clients.jedis.HostAndPort">-->
+					<!--<constructor-arg index="0" value="192.168.10.132"></constructor-arg>-->
+					<!--<constructor-arg index="1" value="7003"></constructor-arg>-->
+				<!--</bean>-->
 			</set>
 		</constructor-arg>
 		<constructor-arg name="poolConfig" ref="jedisPoolConfig"></constructor-arg>

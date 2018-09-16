@@ -15,7 +15,7 @@ import redis.clients.jedis.JedisPool;
 
 public class JedisTest {
 
-	@Test
+//	@Test
 	public void testJedis() throws Exception {
 		Jedis jedis = new Jedis("192.168.31.200", 7001);
 		jedis.set("hello", "1000");
@@ -24,7 +24,7 @@ public class JedisTest {
 		jedis.close();
 	}
 	
-	@Test
+//	@Test
 	public void testJedisPool() throws Exception {
 		//创建jedis连接池
 		JedisPool pool = new JedisPool("192.168.31.200", 7001);
@@ -39,7 +39,7 @@ public class JedisTest {
 		
 	}
 	
-	@Test
+//	@Test
 	public void testJedisCluster() throws Exception {
 		//创建集群的节点
 		HashSet<HostAndPort> nodes = new HashSet<>();
@@ -61,7 +61,7 @@ public class JedisTest {
 		jedisCluster.close();
 	}
 	
-	@Test
+//	@Test
 	public void testJedisClientSpring(){
 		// 加载spring配置文件
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring/*.xml");
