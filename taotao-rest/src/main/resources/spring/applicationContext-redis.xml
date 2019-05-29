@@ -32,14 +32,12 @@
 		<property name="blockWhenExhausted" value="false" />
 	</bean>	
 
-<!-- 
 	<bean id="jedisPool" class="redis.clients.jedis.JedisPool">
-		<constructor-arg name="host" value="192.168.25.153"/>
+		<constructor-arg name="host" value="192.168.10.130"/>
 		<constructor-arg name="port" value="6379"/>
 		<constructor-arg name="poolConfig" ref="jedisPoolConfig"/>
-	</bean> 
--->
-	
+	</bean>
+
 	<!-- 集群环境的配置,任选其一 -->
 	<bean id="jedisCluster" class="redis.clients.jedis.JedisCluster">
 		<constructor-arg name="nodes">
@@ -63,8 +61,8 @@
 	
 	<!-- redis客户端实现类 -->
 	<!-- 单机版 -->
-	<!-- <bean id="jedisClient" class="com.taotao.rest.dao.impl.JedisClientPool"/> -->
+	 <bean id="jedisClient" class="com.taotao.rest.dao.impl.JedisClientPool"/>
 	<!-- 集群版 -->
-	<bean id="jedisClient" class="com.taotao.rest.dao.impl.JedisClientCluster"/>
+	<!--<bean id="jedisClient" class="com.taotao.rest.dao.impl.JedisClientCluster"/>-->
 	
 </beans>

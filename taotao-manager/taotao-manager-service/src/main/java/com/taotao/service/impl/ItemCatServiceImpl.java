@@ -41,7 +41,7 @@ public class ItemCatServiceImpl implements ItemCatService {
 		for (TbItemCat tbItemCat : list) {
 			//创建一个TreeNode对象
 			TreeNode node = new TreeNode(tbItemCat.getId(), tbItemCat.getName(), 
-					tbItemCat.getIsParent()?"closed":"open");
+					tbItemCat.getIsParent() ? "closed" : "open");
 			resultList.add(node);
 		}
 		

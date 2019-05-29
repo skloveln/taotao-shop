@@ -21,15 +21,15 @@ import com.taotao.pojo.TbItemExample;
 import com.taotao.pojo.TbItemParamItem;
 import com.taotao.service.ItemService;
 
+import javax.annotation.Resource;
+
 @Service
 public class ItemServiceImpl implements ItemService {
 	
 	@Autowired
 	TbItemMapper itemMapper;
-	
 	@Autowired
 	TbItemDescMapper itemDescMapper;
-	
 	@Autowired
 	private TbItemParamItemMapper itemParamItemMapper;
 	
@@ -43,26 +43,19 @@ public class ItemServiceImpl implements ItemService {
 
 	@Override
 	public EasyUIDataGridResult getItemList(int page, int rows) {
-		
 		//分页处理
 		PageHelper.startPage(page, rows);
-		
 		//执行查询
 		TbItemExample example = new TbItemExample();
-		
 		//添加条件
 		//Criteria criteria = example.createCriteria();
 		//criteria.andIdEqualTo(123l);
-		
 		List<TbItem> list = itemMapper.selectByExample(example);
-		
 		//取total
 		PageInfo<TbItem> pageInfo = new PageInfo<>(list);
 		long total = pageInfo.getTotal();
-		
 		//创建返回值对象
 		EasyUIDataGridResult result = new EasyUIDataGridResult(total, list);
-		
 		return result;
 	}
 
